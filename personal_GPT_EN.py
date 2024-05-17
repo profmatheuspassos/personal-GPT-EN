@@ -41,13 +41,13 @@ messages = gather_messages()
 filename = save_to_file()
 # Prompt the user to choose a template
 try:
-    model = input("Choose a model: gpt-4-turbo-preview, gpt-4 (default gpt-4): ")
+    model = input("Choose a model: gpt-4o, gpt-4-turbo, gpt-3.5-turbo (default gpt-4o): ")
 except ValueError:
-    model = "gpt-4" # Default model
-# Ensure the model is either gpt-4-turbo-preview or gpt-4
-if model not in ["gpt-4-turbo-preview", "gpt-4"]:
-    model = "gpt-4"
-    print("Invalid model value. Setting to default (gpt-4).")
+    model = "gpt-4o" # Default model
+# Ensure the model is either gpt-4o, gpt-4-turbo, or gpt-3.5-turbo
+if model not in ["gpt-4o", "gpt-4-turbo", "gpt-3.5-turbo"]:
+    model = "gpt-4o"
+    print("Invalid model value. Setting to default (gpt-4o).")
 # Prompt the user to set the temperature
 try:
     temperature = float(input("Set the temperature: 0.0 to 2.0 (default 0.5): "))
