@@ -2,6 +2,8 @@
 # Date: April 7, 2024
 # DISCLAIMER: This script is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the script or the use or other dealings in the script.
 
+# 2024-09-25 update: removal of gpt-3-turbo model; inclusion of gpt-4o-mini model.
+
 import os
 import openai
 from pathlib import Path
@@ -41,13 +43,13 @@ messages = gather_messages()
 filename = save_to_file()
 # Prompt the user to choose a template
 try:
-    model = input("Choose a model: gpt-4o, gpt-4-turbo, gpt-3.5-turbo (default gpt-4o): ")
+    model = input("Choose a model: gpt-4o, gpt-4o-mini (default gpt-4o-mini): ")
 except ValueError:
-    model = "gpt-4o" # Default model
+    model = "gpt-4o-mini" # Default model
 # Ensure the model is either gpt-4o, gpt-4-turbo, or gpt-3.5-turbo
-if model not in ["gpt-4o", "gpt-4-turbo", "gpt-3.5-turbo"]:
-    model = "gpt-4o"
-    print("Invalid model value. Setting to default (gpt-4o).")
+if model not in ["gpt-4o", "gpt-4o-mini"]:
+    model = "gpt-4o-mini"
+    print("Invalid model value. Setting to default (gpt-4o-mini).")
 # Prompt the user to set the temperature
 try:
     temperature = float(input("Set the temperature: 0.0 to 2.0 (default 0.5): "))

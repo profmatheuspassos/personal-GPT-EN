@@ -6,7 +6,7 @@ This script is designed to facilitate interaction with OpenAI's language models 
 
 - **User Interaction for Data Collection**: Collects messages from the user specifying the role of the AI, the context, and specific tasks or questions. These are structured in a loop where the user can continuously input messages until 'done' is entered.
 
-- **Model and Temperature Setting**: Allows the user to choose between different OpenAI models (default to `gpt-4`) and set the temperature parameter (default to 0.5), which affects the randomness of the model's responses.
+- **Model and Temperature Setting**: Allows the user to choose between different OpenAI models (default to `gpt-4o-mini`) and set the temperature parameter (default to 0.5), which affects the randomness of the model's responses.
 
 - **Response Generation**: Uses the collected messages as input to generate responses from the specified OpenAI model.
 
@@ -20,7 +20,7 @@ This script is designed to facilitate interaction with OpenAI's language models 
    
 2. **Input Collection**: Enter the initial instruction for the AI, followed by a series of messages. Finish inputting by typing 'done'.
    
-3. **Model Selection**: Choose an OpenAI model. If an invalid model name is entered, it defaults to `gpt-4`.
+3. **Model Selection**: Choose an OpenAI model. If an invalid model name is entered, it defaults to `gpt-4o-mini`.
    
 4. **Temperature Setting**: Set the desired temperature for the model's response generation. It handles invalid inputs by defaulting to a temperature of 0.5.
    
